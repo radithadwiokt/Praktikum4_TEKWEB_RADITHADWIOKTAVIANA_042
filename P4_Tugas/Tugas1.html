@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #feffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            background: #171c21;
+            padding: 25px;
+            border-radius: 20px;
+            width: 300px;
+        }
+
+        h2 {
+            color: rgb(105, 216, 174);
+            text-align: center;
+        }
+
+        #display {
+            width: 100%;
+            height: 65px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 10px;
+            background: #f4f7f7;
+            text-align: right;
+            font-size: 30px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 60px;
+            border: none;
+            border-radius: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            background: #3d444b;
+            color: rgb(48, 155, 123);
+        }
+
+        button:hover {
+            background: #4f545d;
+        }
+
+        .operator {
+            background: #7db3a7;
+        }
+
+        .clear {
+            background: #a2f3cd;
+        }
+
+        .equal {
+            background: #8ce0c9;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h2>Kalkulator</h2>
+
+        <input type="text" id="display" value="0" readonly>
+
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="deleteNumber()">DEL</button>
+            <button class="operator" onclick="chooseOperator('/')">÷</button>
+            <button class="operator" onclick="chooseOperator('*')">×</button>
+
+            <button onclick="addNumber('7')">7</button>
+            <button onclick="addNumber('8')">8</button>
+            <button onclick="addNumber('9')">9</button>
+            <button class="operator" onclick="chooseOperator('-')">−</button>
+
+            <button onclick="addNumber('4')">4</button>
+            <button onclick="addNumber('5')">5</button>
+            <button onclick="addNumber('6')">6</button>
+            <button class="operator" onclick="chooseOperator('+')">+</button>
+
+            <button onclick="addNumber('1')">1</button>
+            <button onclick="addNumber('2')">2</button>
+            <button onclick="addNumber('3')">3</button>
+            <button onclick="addNumber('.')">.</button>
+
+            <button onclick="addNumber('0')">0</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

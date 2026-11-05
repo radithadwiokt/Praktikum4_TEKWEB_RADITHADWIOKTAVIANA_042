@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validasi Data</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1eef5;
+            margin: 0;
+            padding: 50px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #333;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .form-box {
+            background-color: #e8f0e9;
+            padding: 30px;
+            border-radius: 15px;
+            width: 310px;
+        }
+
+        label {
+            display: inline-block;
+            width: 60px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            padding: 12px;
+            width: 210px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #58ceb9;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #error-message {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Form Validasi Data</h1>
+        <p>Silakan isi nama dan email kamu.</p>
+
+        <div class="form-box">
+
+            <label>Nama:</label>
+            <input type="text" id="nama">
+            <br><br>
+
+            <label>Email:</label>
+            <input type="text" id="email">
+            <br><br>
+
+            <button type="button" onclick="validasiForm()">Submit</button>
+
+            <div id="error-message"></div>
+
+        </div>
+
+    </div>
+
+    <script src="latihan3.js"></script>
+
+</body>
+</html>
